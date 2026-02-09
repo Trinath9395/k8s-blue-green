@@ -4,4 +4,4 @@ metadata:
   name: backend 
   namespace: expense 
 data: 
-  DB_HOST: expense-dev.tridev.online 
+  DB_HOST: mysql-dev.tridev.online 
