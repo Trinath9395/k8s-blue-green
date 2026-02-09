@@ -27,3 +27,6 @@ spec:
       containers: 
       - name: backend 
         image: trinathr/backend:1.0.0 
+        envFrom: 
+        - configMapRef:
+          name: backend
