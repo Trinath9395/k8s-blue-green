@@ -1,7 +1,7 @@
 apiVersion: apps/v1 
 kind: Deployment 
 metadata: 
-  name: backend 
+  name: backend-blue
   namespace: expense 
   labels: 
     app: backend
@@ -27,6 +27,6 @@ spec:
       containers: 
       - name: backend 
         image: trinathr/backend:1.0.0 
-        envFrom: 
+        envFrom:
         - configMapRef:
-          name: backend
+            name: backend
