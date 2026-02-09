@@ -1,0 +1,29 @@
+apiVersion: apps/v1 
+kind: Deployment 
+metadata: 
+  name: backend 
+  namespace: expense 
+  labels: 
+    app: backend
+    tier: backend
+    project: expense 
+    verrion: blue 
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+      tier: backend
+      project: expense 
+      version: blue
+  template: 
+    metadata: 
+      labels: 
+        app: backend
+        tier: backend
+        project: expense 
+        version: blue
+    spec: 
+      containers: 
+      - name: backend 
+        image: trinathr/backend:1.0.0 
